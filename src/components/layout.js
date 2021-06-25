@@ -1,24 +1,24 @@
 import React from "react"
 import { Navbar, Footer } from "../components"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
-import HelveticaNeue from "../fonts/HelveticaNeue.ttf"
-import HelveticaNeueMedium from "../fonts/HelveticaNeueMedium.ttf"
-import HelveticaNeueBold from "../fonts/HelveticaNeueBold.ttf"
+import HelveticaNeue from "../fonts/HelveticaNeue.otf"
+import HelveticaNeueMedium from "../fonts/HelveticaNeueMedium.otf"
+import GTAmericaBold from "../fonts/GT-AmericaBold.otf"
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "Helvetica Neue";
-    src: url(${HelveticaNeue}) format("truetype");
+    font-family: "HelveticaNeue";
+    src: url(${HelveticaNeue}) format("opentype");
     font-weight: 400;
   }
   @font-face {
-    font-family: "Helvetica Neue";
-    src: url(${HelveticaNeueMedium}) format("truetype");
+    font-family: "HelveticaNeue";
+    src: url(${HelveticaNeueMedium}) format("opentype");
     font-weight: 500;
   }
   @font-face {
-    font-family: "Helvetica Neue";
-    src: url(${HelveticaNeueBold}) format("truetype");
+    font-family: "GT America";
+    src: url(${GTAmericaBold}) format("opentype");
     font-weight: 700;
   }
   * {
@@ -29,29 +29,38 @@ const GlobalStyle = createGlobalStyle`
   body {
     overflow-x: hidden;
     background: ${props => props.theme.background};
-    color: ${props => props.theme.foreground};;
-    font-family: "Helvetica Neue", sans-serif;
+    color: ${props => props.theme.foreground};
+    font-family: "HelveticaNeue", sans-serif;
+  }
+  h1 {
+    font-family: "GT America", sans-serif;
+  }
+  p {
+    letter-spacing: 0.05rem;
   }
   main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
-  header {
-      flex-grow: 1;
+  .children {
+    margin: 0 2rem;
+  }
+  @media (max-width: 768px) {
+    .children {
+      margin: 0;
+    }
   }
 `
 
 const Layout = ({ children }) => {
   return (
     <>
-      <ThemeProvider theme={{ foreground: "black", background: "white" }}>
+      <ThemeProvider theme={{ foreground: "white", background: "black" }}>
         <GlobalStyle />
         <main>
-          <header>
-            <Navbar />
-            {children}
-          </header>
+          <Navbar />
+          <div className="children">{children}</div>
           <Footer />
         </main>
       </ThemeProvider>
