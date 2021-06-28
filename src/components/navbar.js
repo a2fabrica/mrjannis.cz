@@ -42,7 +42,7 @@ const Navbar = styled(({ className }) => {
             <Link to="">Hodnocení</Link>
           </li>
           <li>
-            <Link to="">Kudy k nám</Link>
+            <Link to="/kudy-k-nam">Kudy k nám</Link>
           </li>
           <li>
             <Link to="">Objednejte online</Link>
