@@ -32,13 +32,13 @@ const Footer = styled(({ className }) => {
           </ul>
         </div>
         <div>
-          <span class="title">Adresa</span> <br />
+          <span className="title">Adresa</span> <br />
           Střecha Galerie Harfa, <br />
           Českomoravská 2420/15a, <br />
           190 00 Praha 9
         </div>
         <div>
-          <span class="title">Otevírací doba</span> <br /> Po-Ne 11-22
+          <span className="title">Otevírací doba</span> <br /> Po-Ne 11-22
         </div>
       </div>
       <div className="copyright">
@@ -100,7 +100,7 @@ const Footer = styled(({ className }) => {
     color: ${props => props.theme.background};
   }
   a:hover {
-    color: lightgrey;
+    color: grey;
     text-decoration: underline;
   }
   .title {
