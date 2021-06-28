@@ -18,16 +18,18 @@ const Footer = styled(({ className }) => {
               <Link to="/">Úvod</Link>
             </li>
             <li>
-              <Link to="">Menu</Link>
+              <Link to="/menu">Menu</Link>
             </li>
             <li>
-              <Link to="">Hodnocení</Link>
+              <Link to="https://g.page/r/CVeMn9I-izFVEAg/review">
+                Hodnocení
+              </Link>
             </li>
             <li>
-              <Link to="">Kudy k nám</Link>
+              <Link to="/kudy-k-nam">Kudy k nám</Link>
             </li>
             <li>
-              <Link to="">Objednejte online</Link>
+              <Link to="/">Objednejte online</Link>
             </li>
           </ul>
         </div>
@@ -45,7 +47,9 @@ const Footer = styled(({ className }) => {
         <ul>
           <li>A2Fabrica s.r.o. © {new Date().getFullYear()}</li>
           <li>
-            <a href="">Vytvořil Kovačević Marko</a>
+            <a href="https://kvcvc.cz/" target="_blank">
+              Vytvořil Kovačević Marko
+            </a>
           </li>
         </ul>
       </div>

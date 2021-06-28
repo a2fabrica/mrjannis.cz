@@ -22,7 +22,7 @@ const Navbar = styled(({ className }) => {
             <img src={Logo} alt="logo" />
           </li>
           <li className="cta">
-            <Button href="">Objednejte online</Button>
+            <Button href="/">Objednejte online</Button>
           </li>
         </ul>
       </nav>
@@ -39,16 +39,20 @@ const Navbar = styled(({ className }) => {
             <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <Link to="">Hodnocení</Link>
+            <Link to="https://g.page/r/CVeMn9I-izFVEAg/review">Hodnocení</Link>
           </li>
           <li>
             <Link to="/kudy-k-nam">Kudy k nám</Link>
           </li>
           <li>
-            <Link to="">Objednejte online</Link>
+            <Link to="/">Objednejte online</Link>
           </li>
           <li>
-            <a className="social" href="">
+            <a
+              className="social"
+              href="https://www.instagram.com/mrjannis.cz/"
+              target="_blank"
+            >
               <svg>
                 <use href={`${Shapes}#instagram`}></use>
               </svg>
@@ -56,7 +60,11 @@ const Navbar = styled(({ className }) => {
             </a>
           </li>
           <li>
-            <a className="social" href="">
+            <a
+              className="social"
+              href="https://www.facebook.com/mrjannis.cz/"
+              target="_blank"
+            >
               <svg>
                 <use href={`${Shapes}#facebook`}></use>
               </svg>
@@ -68,6 +76,7 @@ const Navbar = styled(({ className }) => {
       <div
         className={`overlay ${isMenuOpened}`}
         onMouseDown={() => setisMenuOpened()}
+        role="none"
       ></div>
     </div>
   )

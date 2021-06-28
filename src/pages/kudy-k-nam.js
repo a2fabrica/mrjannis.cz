@@ -23,6 +23,7 @@ const Kudyknam = styled(({ className }) => {
               width="500"
               height="500"
               frameBorder="0"
+              title="map"
             />
           </div>
         </section>
