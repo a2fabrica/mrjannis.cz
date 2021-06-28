@@ -36,7 +36,7 @@ const Navbar = styled(({ className }) => {
             <Link to="/">Úvod</Link>
           </li>
           <li>
-            <Link to="">Menu</Link>
+            <Link to="/menu">Menu</Link>
           </li>
           <li>
             <Link to="">Hodnocení</Link>
@@ -52,7 +52,7 @@ const Navbar = styled(({ className }) => {
               <svg>
                 <use href={`${Shapes}#instagram`}></use>
               </svg>
-              Instagram
+              <span>Instagram</span>
             </a>
           </li>
           <li>
@@ -60,7 +60,7 @@ const Navbar = styled(({ className }) => {
               <svg>
                 <use href={`${Shapes}#facebook`}></use>
               </svg>
-              Facebook
+              <span>Facebook</span>
             </a>
           </li>
         </ul>
@@ -72,6 +72,7 @@ const Navbar = styled(({ className }) => {
     </div>
   )
 })`
+  height: 5.75rem;
   nav {
     margin: 1rem 2rem 0 2rem;
     ul {
@@ -88,7 +89,6 @@ const Navbar = styled(({ className }) => {
       max-width: 24rem;
       min-width: 16rem;
       height: auto;
-      color: ${props => props.theme.foreground}
     }
     .hamburger {
       justify-content: flex-start;
@@ -136,7 +136,7 @@ const Navbar = styled(({ className }) => {
     transform: translateX(-100%);
     visibility: hidden;
     z-index: 2;
-    transition: transform 0.3s;
+    transition: 0.3s;
   }
   .isMenuOpened {
     transform: translateX(0) !important; 
@@ -190,7 +190,7 @@ const Navbar = styled(({ className }) => {
     list-style: none;
   }
   .menu ul li {
-    padding: 0.25em 0;
+    margin: .5rem 0;
   }
   .menu ul li a {
     color: ${props => props.theme.foreground};
@@ -202,22 +202,24 @@ const Navbar = styled(({ className }) => {
   .menu ul li a:visited {
     color: ${props => props.theme.foreground};
   }
-  .menu ul li a:hover {
+  .menu ul li a:hover,
+  .menu ul li a span:hover {
     color: grey;
     text-decoration: underline;
   }
   .menu .social {
-    padding: 0.25em 0;
     font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
+    font-weight: 400;
   }
   .menu .social svg {
-    display: inline-block;
     width: 1rem;
     height: 1rem;
     margin-right: 0.25rem;
+  }
+  .menu .social svg,
+  .menu .social span {
+    display: inline-block;
+    vertical-align: middle;
   }
   @media (max-width: 1280px) {
     .cta {
