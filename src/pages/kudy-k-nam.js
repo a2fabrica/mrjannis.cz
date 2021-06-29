@@ -31,14 +31,14 @@ const Kudyknam = styled(({ className }) => {
     </Layout>
   )
 })`
+  margin: 0 2rem;
   h1 {
     font-size: 3.5rem;
     line-height: 4rem;
-    padding: 0 2rem;
   }
   p {
     font-size: 1.5rem;
-    padding: 0.75rem 2rem 0 2rem;
+    margin: 0.75rem 0 0.75rem 0;
   }
   section {
     min-height: 100vh;

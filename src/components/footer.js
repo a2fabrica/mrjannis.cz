@@ -47,7 +47,7 @@ const Footer = styled(({ className }) => {
         <ul>
           <li>A2Fabrica s.r.o. © {new Date().getFullYear()}</li>
           <li>
-            <a href="https://kvcvc.cz/" target="_blank">
+            <a href="https://kvcvc.cz/" target="_blank" rel="noreferrer">
               Vytvořil Kovačević Marko
             </a>
           </li>
