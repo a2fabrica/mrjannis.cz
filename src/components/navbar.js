@@ -39,7 +39,13 @@ const Navbar = styled(({ className }) => {
             <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <Link to="https://g.page/r/CVeMn9I-izFVEAg/review">Hodnocení</Link>
+            <a
+              href="https://g.page/r/CVeMn9I-izFVEAg/review"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Hodnocení
+            </a>
           </li>
           <li>
             <Link to="/kudy-k-nam">Kudy k nám</Link>

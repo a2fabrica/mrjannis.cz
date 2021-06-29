@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 
 const Kudyknam = styled(({ className }) => {
   return (
     <Layout>
+      <SEO title="Kudy k nám" />
       <div className={className}>
         <section>
           <div className="text">

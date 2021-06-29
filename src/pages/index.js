@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 import Hero from "../images/hero.jpg"
 import Promo1 from "../images/promo1.jpg"
 import Promo2 from "../images/promo2.jpg"
@@ -8,6 +8,7 @@ import Promo2 from "../images/promo2.jpg"
 const Index = styled(({ className }) => {
   return (
     <Layout>
+      <SEO title="Úvod" />
       <div className={className}>
         <section className="hero">
           <div className="background"></div>

@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 
 const _404 = styled(({ className }) => {
   return (
     <Layout>
+      <SEO title="404" />
       <div className={className}>
         <section>
           <div>
@@ -27,7 +28,7 @@ const _404 = styled(({ className }) => {
   }
   section {
     margin-top: 2rem;
-    min-height: 75vh;
+    min-height: 65vh;
   }
 `
 

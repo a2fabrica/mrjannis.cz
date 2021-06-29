@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 
 const Menu = styled(({ className }) => {
   return (
     <Layout>
+      <SEO title="Menu" />
       <div className={className}>
         <section className="menu">
           <div className="container">
