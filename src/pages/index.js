@@ -93,6 +93,7 @@ const Index = styled(({ className }) => {
   @media (max-width: 768px) {
     section.hero .content {
       margin: 2rem;
+      padding-right: 1rem;
     }
     h1 {
       font-size: 2.5rem;
