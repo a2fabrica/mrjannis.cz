@@ -8,7 +8,7 @@ const Footer = styled(({ className }) => {
     <footer className={className}>
       <div className="info">
         <div className="logo">
-          <Link to="/">
+          <Link to="/" aria-label="homepage">
             <img src={Logo} alt="logo" />
           </Link>
         </div>

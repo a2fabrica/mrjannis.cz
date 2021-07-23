@@ -59,6 +59,7 @@ const Navbar = styled(({ className }) => {
               href="https://www.instagram.com/mrjannis.cz/"
               target="_blank"
               rel="noreferrer"
+              aria-label="instagram"
             >
               <svg>
                 <use href={`${Shapes}#instagram`}></use>
@@ -72,6 +73,7 @@ const Navbar = styled(({ className }) => {
               href="https://www.facebook.com/mrjannis.cz/"
               target="_blank"
               rel="noreferrer"
+              aria-label="facebook"
             >
               <svg>
                 <use href={`${Shapes}#facebook`}></use>
