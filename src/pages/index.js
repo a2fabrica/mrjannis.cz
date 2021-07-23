@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Layout, SEO } from "../components"
-import Hero from "../images/hero.jpg"
-import Promo1 from "../images/promo1.jpg"
-import Promo2 from "../images/promo2.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Index = styled(({ className }) => {
   return (
@@ -11,7 +9,11 @@ const Index = styled(({ className }) => {
       <SEO title="Úvod" />
       <div className={className}>
         <section className="hero">
-          <div className="background"></div>
+          <StaticImage
+            src="../images/hero.jpg"
+            alt="hero"
+            className="background"
+          />
           <div className="content">
             <h1>
               Autentický řecký streetfood <br />
@@ -26,7 +28,7 @@ const Index = styled(({ className }) => {
         <section className="promo">
           <article className="reversed">
             <div className="image">
-              <img src={Promo1} alt="gyros" />
+              <StaticImage src="../images/promo1.jpg" alt="gyros" />
             </div>
             <div className="text background-image-1">
               <h1>Tradiční řecká kuchyň</h1>
@@ -41,7 +43,7 @@ const Index = styled(({ className }) => {
           </article>
           <article>
             <div className="image">
-              <img src={Promo2} alt="souvlaki" />
+              <StaticImage src="../images/promo2.jpg" alt="souvlaki" />
             </div>
             <div className="text">
               <h1>Pro každého něco</h1>
@@ -74,10 +76,6 @@ const Index = styled(({ className }) => {
   }
   section.hero .background {
     position: absolute;
-    background-image: url(${Hero});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     opacity: 0.5;
     width: 100%;
     height: 90vh;
@@ -89,6 +87,23 @@ const Index = styled(({ className }) => {
     margin: 5rem 0 0 0;
     overflow-wrap: break-word;
     width: 100%;
+  }
+  section.promo {
+    margin-bottom: 2rem;
+  }
+  section.promo article {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  section.promo article.reversed .image {
+    order: 2;
+  }
+  section.promo article.reversed .text {
+    order: 1;
   }
   @media (max-width: 768px) {
     section.hero .content {
@@ -107,31 +122,6 @@ const Index = styled(({ className }) => {
       font-size: 1.25rem;
       padding: 0 2rem 0 0;
     }
-  }
-  section.promo {
-    margin-bottom: 2rem;
-  }
-  section.promo article {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-  }
-  section.promo article .image img {
-    width: 100%;
-    max-width: 40rem;
-    padding: 0 2rem;
-    object-fit: cover;
-  }
-  section.promo article.reversed .image {
-    order: 2;
-  }
-  section.promo article.reversed .text {
-    order: 1;
-  }
-  @media (max-width: 768px) {
     section.promo {
       margin-top: 1.75rem;
       margin-bottom: 4rem;
@@ -150,7 +140,7 @@ const Index = styled(({ className }) => {
       order: 1;
     }
     section.promo article .image img {
-      max-width: none;
+      padding: 0 2rem;
     }
   }
 `
