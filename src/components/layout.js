@@ -10,16 +10,19 @@ const GlobalStyle = createGlobalStyle`
     font-family: "HelveticaNeue";
     src: url(${HelveticaNeue}) format("opentype");
     font-weight: 400;
+    font-display: swap;
   }
   @font-face {
     font-family: "HelveticaNeue";
     src: url(${HelveticaNeueMedium}) format("opentype");
     font-weight: 500;
+    font-display: swap;
   }
   @font-face {
     font-family: "GT America";
     src: url(${GTAmericaBold}) format("opentype");
     font-weight: 700;
+    font-display: swap;
   }
   * {
     box-sizing: border-box;
