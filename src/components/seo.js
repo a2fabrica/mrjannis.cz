@@ -13,7 +13,7 @@ const SEO = ({ title, description }) => {
           title
           titleTemplate
           description
-          url
+          siteUrl
         }
       }
     }
@@ -39,7 +39,7 @@ const SEO = ({ title, description }) => {
         },
         {
           property: "og:url",
-          content: `${data.site.siteMetadata.url}${pathname}`,
+          content: `${data.site.siteMetadata.siteUrl}${pathname}`,
         },
         {
           property: "og:title",

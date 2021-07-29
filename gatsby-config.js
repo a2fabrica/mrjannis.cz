@@ -3,7 +3,7 @@ module.exports = {
     title: "MR. JANNIS",
     titleTemplate: "%s | MR. JANNIS",
     description: "Autentický řecký streetfood",
-    url: "https://mrjannis.cz",
+    siteUrl: "https://mrjannis.cz",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -20,5 +20,6 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
   ],
 }
